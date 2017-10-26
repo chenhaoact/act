@@ -1,0 +1,27 @@
+{
+  "name": "act",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "act": "bin/act"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenhaoact/act.git"
+  },
+  "author": "chenhaoact",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenhaoact/act/issues"
+  },
+  "homepage": "https://github.com/chenhaoact/act#readme",
+  "dependencies": {
+    "chalk": "^2.2.0",
+    "commander": "^2.11.0",
+    "inquirer": "^3.3.0"
+  }
+}

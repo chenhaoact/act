@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>Title</title>
+</head>
+<body>
+<div id="container">
+  <p>
+    测试
+  </p>
+</div>
+</body>
+<script type="text/javascript">
+  //originWidth设置设计稿原型的屏幕宽度（此处以ipnoe6 设计稿原型屏幕宽375为例）
+  let currentClientWidth, fontValue, originWidth = 375;
+  __resize();
+
+  //注册resize事件
+  window.addEventListener('resize', __resize, false);
+
+  function __resize() {
+    currentClientWidth = document.documentElement.clientWidth;
+
+    //设置屏幕的最大值和最小值
+    if (currentClientWidth > 640) {
+      currentClientWidth = 640
+    }
+    if (currentClientWidth < 320){
+      currentClientWidth = 320;
+    }
+
+    const scale = currentClientWidth/10;
+
+    window.adjustScale = 375/10;
+
+    document.documentElement.style.fontSize = `${scale}px`;
+    document.body.style.fontSize = `${12/scale}rem`;
+  }
+</script>
+</html>
